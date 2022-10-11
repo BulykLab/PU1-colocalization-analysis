@@ -1,0 +1,2 @@
+nsnps	PP.H0.abf	PP.H1.abf	PP.H2.abf	PP.H3.abf	PP.H4.abf	peak	trait
+645	0	9.47530184867893e-06	0	0.999990441876184	8.28220220991228e-08	PU1_76430	plt_dist_width

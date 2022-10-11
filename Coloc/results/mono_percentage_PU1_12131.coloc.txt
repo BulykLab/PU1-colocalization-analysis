@@ -1,0 +1,2 @@
+nsnps	PP.H0.abf	PP.H1.abf	PP.H2.abf	PP.H3.abf	PP.H4.abf	peak	trait
+404	0	0.65301111130876	0	0.332434702018979	0.0145541866723744	PU1_12131	mono_percentage
