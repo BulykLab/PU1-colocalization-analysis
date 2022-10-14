@@ -1,0 +1,2 @@
+userIdxBP	 actualIdxBP	STAT	pvalue	usedSNPsNo	startBP	endBP	sectrSampleSize	sectrGeneName	sectrIdxSNPAssocPvalue	sectrMinAssocPvalue	executedPerm	desc
+46502295	46433102	-30.4226090269957	0.99	291	46402849	46602294	NA	NoGeneName	0.00216488018363606	5.22604819918288e-17	100000	executed

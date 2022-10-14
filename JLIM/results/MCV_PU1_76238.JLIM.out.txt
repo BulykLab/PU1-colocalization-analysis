@@ -1,0 +1,2 @@
+userIdxBP	 actualIdxBP	STAT	pvalue	usedSNPsNo	startBP	endBP	sectrSampleSize	sectrGeneName	sectrIdxSNPAssocPvalue	sectrMinAssocPvalue	executedPerm	desc
+39358037	39358037	NA	NA	46	39258078	39420612	NA	NoGeneName	1.33760572346367e-06	1.33760572346367e-06	0	too few SNPs to run JLIM
