@@ -22,7 +22,7 @@ bash job_run_coloc.sh
 ## JLIM
 - GWAS summary statistics and PU.1 phenotype and genotype data for tested loci are in `JLIM/data`.
 - JLIM results are in `JLIM/results`.
-- Code to reproduce the results are in `JLIM/scripts`. The code takes ~ 1hr for each locus, and there are 1623 loci.
+- Code to reproduce the results are in `JLIM/scripts`. The code takes ~ 2hr for each locus on a computing cluster, and there are 1623 loci. So the repo also includes an example script for parallel job submission.
 - Need to install <a href="https://github.com/cotsapaslab/jlim">JLIM</a> to run the code. At this time, JLIM v2.5 is released, but we used JLIM v2.0 scripts. The uploaded code can run on JLIM v2.5.
 
 ```
@@ -30,6 +30,8 @@ cd ${THIS_DIR}/JLIM/scripts
 
 # The code expects R/3.6.3 and python 2.7
 # It currently loads a module, but feel free to comment it out
-bash job_run_jlim_all_loci.sh
+bash job_run_jlim_all_loci.sh  # This might take long
+
+# bash job_run_jlim_parallel.sh  # This submits jlim analysis jobs by blood cell trait and chromosome
 ```
 
