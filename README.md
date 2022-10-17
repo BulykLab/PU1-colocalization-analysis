@@ -28,7 +28,7 @@ bash job_run_coloc.sh
 ```
 cd ${THIS_DIR}/JLIM/scripts
 
-# The code expects R/3.6.3 and pythone 2.7
+# The code expects R/3.6.3 and python 2.7
 # It currently loads a module, but feel free to comment it out
 bash job_run_jlim_all_loci.sh
 ```
