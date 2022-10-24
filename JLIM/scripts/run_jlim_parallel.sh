@@ -1,8 +1,6 @@
 #!/bin/bash
 
 
-
-
 # run_jlim_parallel.sh
 # 1. Run Makedosage
 # 2. Run runRegression
@@ -42,15 +40,15 @@ do
   echo $key
 
   # 1. Run Makedosage
-  python ${JLIM_DIR}/bin/Makedosage.py 1 ${chr} ${QTL_GENO_DIR}/PU1.${trait}.$key.dosage.gz ${QTL_GENO_DIR}/PU1.$key.data.gz ${QTL_GENO_DIR}/PU1.$key.snps.gz
+  python ${JLIM_TOOL_DIR}/bin/Makedosage.py 1 ${chr} ${QTL_GENO_DIR}/PU1.${trait}.$key.dosage.gz ${QTL_GENO_DIR}/PU1.$key.data.gz ${QTL_GENO_DIR}/PU1.$key.snps.gz
 
   # 2. Run runRegression
-  python ${JLIM_DIR}/bin/RunRegressions.py ${QTL_GENO_DIR}/PU1.$key.data.gz ${QTL_GENO_DIR}/PU1.$key.snps.gz \
+  python ${JLIM_TOOL_DIR}/bin/RunRegressions.py ${QTL_GENO_DIR}/PU1.$key.data.gz ${QTL_GENO_DIR}/PU1.$key.snps.gz \
     ${DATA_DIR}/PU1/supp/PU1.samples ${QTL_PHENO_DIR}/$peak.phenotypes ${DATA_DIR}/PU1/supp/PU1.covariates \
     ${PU1_OUT_DIR}/regression/PU1.${trait}.$key 0 100000 ${chr} 1
 
   # 3. Run METAmergecohorts
-  python ${JLIM_DIR}/bin/METAmergecohorts.py 1 ${PU1_OUT_DIR}/regression/PU1.${trait}.$key.assoc.linear.gz ${PU1_OUT_DIR}/regression/PU1.${trait}.$key \
+  python ${JLIM_TOOL_DIR}/bin/METAmergecohorts.py 1 ${PU1_OUT_DIR}/regression/PU1.${trait}.$key.assoc.linear.gz ${PU1_OUT_DIR}/regression/PU1.${trait}.$key \
     ${PU1_OUT_DIR}/regression/PU1.${trait}.$key.betas.mperm.dump.all.gz ${PU1_OUT_DIR}/regression/PU1.${trait}.$key.vars.mperm.dump.all.gz
 
   # Can comment these out if the user wants to inspect these files
@@ -59,7 +57,7 @@ do
   rm ${PU1_OUT_DIR}/regression/PU1.${trait}.$key.vars.mperm.dump.all.gz
 
   # 4. Run JLIM
-  ${JLIM_DIR}/run_jlim.sh --index-snp ${chr}:${pos} \
+  ${JLIM_TOOL_DIR}/run_jlim.sh --index-snp ${chr}:${pos} \
     --maintr-file ${DATA_DIR}/GWAS/${trait}.${chr}.${start}.${end}.txt \
     --sectr-file ${PU1_OUT_DIR}/regression/PU1.${trait}.$key.meta.assoc.linear.gz \
     --ref-ld ${DATA_DIR}/ld0/locus.${chr}.${start}.${end}.txt.gz \
