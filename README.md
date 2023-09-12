@@ -1,6 +1,6 @@
 # PU1-colocalization-analysis
 
-This repository contains code and data for performing colocalization analysis in Jeong and Bulyk (in prep).
+This repository contains code and data for performing colocalization analysis in <a href="https://www.cell.com/cell-genomics/fulltext/S2666-979X(23)00095-2">Jeong and Bulyk (2023)</a>.
 The repository for code to generate figures in the manuscript is <a href="https://github.com/BulykLab/PU1-colocalization-manuscript">here</a>.
 
 Raehoon Jeong (rjeong@g.harvard.edu), Martha Bulyk Lab (mlbulyk@genetics.med.harvard.edu).
